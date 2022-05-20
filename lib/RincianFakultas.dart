@@ -9,7 +9,10 @@ class RincianFakultas extends StatelessWidget {
         title: const Text('Rincian Fakultas'),
       ),
       body: Center(
-        child: Text("rincian fakultas"),
+        child: Image.network(
+          "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg",
+          width: 70,
+        ),
       ),
     );
   }
