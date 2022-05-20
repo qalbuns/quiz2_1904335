@@ -12,17 +12,40 @@ class Fakultas extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(border: Border.all()),
             padding: EdgeInsets.all(14),
-            child: Text("baris 1"),
+            child: Heading(
+              text: "FPMIPA",
+            ),
           ),
           onTap: () {
             //gunakan navigator untuk panggil RincianFakultas
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return RincianFakultas();
+            }));
           },
         ),
         Container(
             decoration: BoxDecoration(border: Border.all()),
             padding: EdgeInsets.all(14),
-            child: Text("baris kedua")),
+            child: Text("FPIPS",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
       ]),
+    );
+  }
+}
+
+class Heading extends StatelessWidget {
+  final String text;
+
+  Heading({required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 }
